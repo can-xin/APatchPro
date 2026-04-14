@@ -31,7 +31,7 @@ APatchPro 用于 Android 内核与系统补丁管理，提供：
 # 安全提示
 
 - 在该版本，虽然加入了双key鉴权，并且2key作为hash写入内核，但仍然是密钥认证，因此仍有安全风险
-- 由于原项目大多数功能与superkey深度绑定，导致在我们试图修改全新的鉴权方式受到了巨大阻力，因此不得不妥协了许多内容，比如1key仍然被作为明文储存在内核，并且管理器。依然依靠androidkeystore加密superkey，并且superkey依然有拉起rootshell的能力，因为这和模块能力直接相关，但是1key原有的能力已经被限制，除拉起rootshell外，其余都为只读，这大大的降低了恶意root读取到1key带来的风险
+- 由于原项目大多数功能与superkey深度绑定，导致在我们试图修改全新的鉴权方式受到了巨大阻力，因此不得不妥协了许多内容，比如1key仍然被作为明文储存在内核，且管理器依然依靠androidkeystore加密superkey，superkey依然有拉起rootshell的能力，因为这和模块能力直接相关，但是1key原有的能力已经被限制，除拉起rootshell外，其余都为只读，这大大的降低了恶意root用户读取到1key带来的风险
 
 # 杂谈
 
